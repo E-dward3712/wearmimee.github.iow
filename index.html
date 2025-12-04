@@ -1,22 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WearMimee – Ready to Wear Fashionn Brand</title>
+  <title>WearMimee – Ready to Wear Fashion Brand</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       padding: 40px;
       text-align: center;
       background-color: #f9f5f0;
+      color: #222;
+      margin: 0;
     }
-    h1 { font-size: 40px; }
-    p { font-size: 18px; }
-    img { width: 280px; border-radius: 12px; margin-top: 20px; }
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 40px;
+      background:#fff;
+      box-shadow:0 1px 4px rgba(0,0,0,0.06);
+    }
+    header h1 { margin:0; font-size:20px; }
+    nav a { margin-left:16px; color:#333; text-decoration:none; font-size:14px; }
+    main { padding:40px; }
+    .hero { max-width:900px; margin:0 auto; }
+    .hero img { width:320px; border-radius:12px; margin-top:20px; }
+    .hero h2 { font-size:28px; margin:8px 0; }
+    .cta {
+      display:inline-block;
+      margin-top:12px;
+      padding:12px 20px;
+      background:#e85a4f;
+      color:#fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .products {
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:36px;
+    }
+    .product {
+      background:#fff;
+      padding:14px;
+      border-radius:10px;
+      width:200px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.06);
+      text-align:left;
+    }
+    .product img { width:100%; border-radius:8px; }
+    .newsletter {
+      margin-top:36px;
+    }
+    .newsletter input[type="email"] {
+      padding:10px;
+      width:240px;
+      border-radius:6px;
+      border:1px solid #ccc;
+    }
+    .newsletter button {
+      padding:10px 14px;
+      margin-left:8px;
+      border-radius:6px;
+      background:#333;
+      color:#fff;
+      border:none;
+    }
+    footer {
+      margin-top:56px;
+      padding:24px 0;
+      color:#666;
+      font-size:14px;
+    }
+    .social a { margin:0 8px; color:#333; text-decoration:none; }
+    @media (max-width:600px) {
+      header { padding:12px; flex-direction:column; gap:8px; }
+      .products { flex-direction:column; align-items:center; }
+    }
   </style>
 </head>
 <body>
-  <h1>WearMimee</h1>
-  <p>Vintage Shirts • Ready to wear Classics • Street Fashion</p>
-  <p>Follow us on Instagram: @wearmimee</p>
+  <header>
+    <h1>WearMimee</h1>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#featured">Featured</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="shop">
+      <h2>Vintage Shirts • Ready to Wear Classics • Street Fashion</h2>
+      <p>Follow us on Instagram: <a href="https://instagram.com/wearmimee" target="_blank" rel="noopener">@wearmimee</a></p>
+      <img src="assets/hero-shirt.jpg" alt="WearMimee featured shirt" />
+      <div>
+        <a class="cta" href="#featured">Shop Now</a>
+      </div>
+    </section>
+
+    <section id="featured" class="products" aria-label="Featured products">
+      <div class="product">
+        <img src="assets/product1.jpg" alt="Vintage shirt 1" />
+        <h3>Vintage Shirt A</h3>
+        <p>$45 • Small • Classic fit</p>
+      </div>
+      <div class="product">
+        <img src="assets/product2.jpg" alt="Vintage shirt 2" />
+        <h3>Classic Tee B</h3>
+        <p>$38 • Medium • Street style</p>
+      </div>
+      <div class="product">
+        <img src="assets/product3.jpg" alt="Vintage shirt 3" />
+        <h3>Retro Shirt C</h3>
+        <p>$52 • Large • Limited</p>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-label="Newsletter signup">
+      <p>Get updates and restocks — join our newsletter</p>
+      <form action="#" method="post" onsubmit="alert('Thanks!'); return false;">
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>Contact: hello@wearmimee.example</div>
+    <div class="social" style="margin-top:8px;">
+      <a href="https://instagram.com/wearmimee" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://twitter.com/wearmimee" target="_blank" rel="noopener">Twitter</a>
+    </div>
+    <div style="margin-top:12px; color:#999;">© WearMimee</div>
+  </footer>
 </body>
 </html>
